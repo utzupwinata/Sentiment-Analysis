@@ -1,0 +1,85 @@
+		
+
+	else if (cekKata("^(seneng|puas|bagus|alhamdulilah)$", kata)) {
+            kata = "yeshappy";
+        }
+	
+	////////////////////////////////////////////////////////////////////////
+		
+	else if (cekKata("^(nyasar|nysar|nyasr|nysr)$", kata)) {
+            kata = "nosent";
+        }
+
+	////////////////////////////////////////////////////////////////////////
+
+	else if (cekKata("^(tertukar)$", kata)) {
+            kata = "nohappy";
+        }
+	else if (cekKata("^(ngeselin|kcewa|kcwa|kesel|kesal|ksl|kesl|ksel|kzl|bete|nyesel|nysel|parah|prah|pasrah|psrah|ngecewain|ngcewain|mengecewakan|menyesal|sebel|sbel|sbl|ngasal|ngsal|kpok|kapok|hopeless)$", kata)) {           
+            kata = "nohappy";//kecewa
+        }
+	else if (cekKata("^(payah|rugi|merugikan|dirugikan)$", kata)) {
+            kata = "nohappy";//kecewa
+        }
+
+	////////////////////////////////////////////////////////////////////////
+	
+	else if (cekKata("^(nyangkut|nyangkt|nyngkut|nyngkt)$", kata)) {
+            kata = "nofast";
+        }
+        else if (cekKata("^(stuck|stuk|stak|ngestuck|ngestuk|ngestak|ngstuck|ngstak|ngstuk)$", kata)) {
+            kata = "nofast";//macet atau terjebak
+        }
+        else if (cekKata("^(mandek|sendat|tunda|tahan|ditunda|tertunda|tertahan|tersendat)$", kata)) {
+            kata = "nofast";
+        }
+
+	////////////////////////////////////////////////////////////////////////
+
+        kata = kata.replace("bad service", "nohappy");
+        kata = kata.replace("bikin emosi", "nohappy");
+        kata = kata.replace("buruk", "nohappy");
+        kata = kata.replace("hilang", "nohappy");
+        kata = kata.replace("kecewa", "nohappy");
+        kata = kata.replace("komplain", "nohappy");
+        kata = kata.replace("rusak", "nohappy");
+        kata = kata.replace("salah sortir", "nohappy");
+        kata = kata.replace("tidak antar", "nohappy");
+        kata = kata.replace("tidak jelas", "nohappy");
+        kata = kata.replace("tidak puas", "nohappy");
+        kata = kata.replace("tidak kirim", "nohappy");
+        
+        kata = kata.replace("belum antar", "nofast");
+        kata = kata.replace("belum kirim", "nofast");
+        kata = kata.replace("belum gerak", "nofast");
+        kata = kata.replace("lama banget", "nofast");
+        kata = kata.replace("lama kali", "nofast");
+        kata = kata.replace("lama sampai", "nofast");
+        kata = kata.replace("lambat banget", "nofast");
+        kata = kata.replace("lambat kali", "nofast");
+        kata = kata.replace("tidak ada maju", "nofast");//tidak ada kemajuan
+        kata = kata.replace("tidak ada ubah", "nofast");//tidak ada perubahan
+        kata = kata.replace("tidak gerak", "nofast");
+        kata = kata.replace("tidak ubah", "nofast");//tidak berubah
+        
+        kata = kata.replace("belum datang", "nosent");
+        kata = kata.replace("belum sampai", "nosent");
+        kata = kata.replace("belum terima", "nosent");
+        kata = kata.replace("belum saya terima", "nosent");
+        kata = kata.replace("belum juga datang", "nosent");
+        kata = kata.replace("belum juga kirim", "nosent");
+        kata = kata.replace("belum juga sampai", "nosent");
+        kata = kata.replace("belum juga terima", "nosent");
+        kata = kata.replace("tidak datang", "nosent");
+        kata = kata.replace("tidak sampai", "nosent");
+        kata = kata.replace("salah kirim", "nosent");
+        kata = kata.replace("salah beri", "nosent");
+        
+        ////////////////////////////////////////////////////////////////////////
+                        
+        kata = kata.replace("cepat sampai", "yesfast");
+        kata = kata.replace("cepat banget", "yesfast");
+        kata = kata.replace("lebih cepat", "yesfast");
+        
+        kata = kata.replace("dengan selamat", "yessent");
+        kata = kata.replace("sudah sampai", "yessent");
